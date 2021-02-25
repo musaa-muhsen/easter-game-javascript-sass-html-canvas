@@ -1,5 +1,5 @@
 $font1: "Helvetica Neue", Helvetica, sans-serif;
-
+// add more fonts 
 $bold1: 700;
 $bold2: 600;
 
@@ -17,7 +17,8 @@ $blueColor: #50A9F4;
 $pink: #FFB9E9;
 $white: #FFFAEF;
 $lightblue: #9FCFF3;
-
+$cadburys1: #4a0d7b;
+$cadburys2: #390b83;
 
 
 $p9: 0.9;
@@ -29,7 +30,7 @@ $p4: 0.4;
 $p3: 0.3;
 
 @mixin mobile {
-	@media all and (max-width: 1700px)  {
+	@media all and (max-width: 375px)  {
        @content;
 	}
 }

@@ -12,16 +12,22 @@ const won = document.querySelector('.won');
 
 const scoreBoard = document.querySelector('.score');
 const startBtn2 = document.getElementById('startGame')
-startBtn2.addEventListener('click' , startGame); // make sure there a few buttons for this 
+startBtn2.addEventListener('click', startGame); // make sure there a few buttons for this 
+startBtn2.addEventListener('touchstart' , startGame )
 
-
-function startGame () {
-    
-console.log(this);
+function startGame (e) {
+    e.preventDefault;
+    if(e.type == 'touchend') {
+        gogo();
+    }
+    if(e.type == 'click') {
+        gogo();
+    }
+//console.log(this);
     //timeUp = true;
-   startBtn2.classList.toggle('hide');
-   timeLeft = 10; 
-   gogo();
+  // startBtn2.classList.toggle('hide');
+   //timeLeft = 10; 
+   
 //    setTimeout(() => {
        
 //        timeUp = true
@@ -29,7 +35,6 @@ console.log(this);
 // }, 10000)
    countdownTimer();
    //this.style.display = "none";
-
 }
 
 function classToggle() {
@@ -61,7 +66,7 @@ function countdownTimer() {
   
         setTimeout(() => {
 //countdownNum.textContent = '10'; // just add it to the dom later this is when it begins  
-          alert(eggsCaught) // after 10 seconds collect these points 
+         // alert(eggsCaught) // after 10 seconds collect these points 
           // add the start button 
           // could add it here the you've won etc 
           
@@ -286,19 +291,35 @@ var then = Date.now();
 setInterval(main, 14);
 
 setInterval(() => {
-   // eggsNumber.innerHTML = eggsCaught;
+    eggsNumber.innerHTML = eggsCaught;
 })
 
 setTimeout(() => {
-    setTimeout(() => {
-        startBtn2.style.display = "block";
-        alert("you've won")
+    if (eggsCaught >= 2 ) {
+        console.log('won!')
+       setTimeout(() => {
+       
+        // add block here 
+       // startBtn2.style.display = "block";
+        //alert("you've won")
         //startGame();
         //gogo();
         location.reload();
-    })
+    }, 5000)
+    } else {
+        console.log('You lost!')
+        setTimeout(() => {
+            // add block here 
+           // startBtn2.style.display = "block";
+            //alert("you've won")
+            //startGame();
+            //gogo();
+            location.reload();
+        }, 5000)
+    }
+ 
    
 
-}, 10000)
+}, 11500)
 
 }
