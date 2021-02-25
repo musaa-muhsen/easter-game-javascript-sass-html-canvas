@@ -8,24 +8,41 @@
     <link rel="stylesheet" href="build/css/main.css">
 </head>
 <body>
-    <div id="div" class="class1">click here</div>
+    <!-- <div id="div" class="class1">click here</div>
     <div class="score">0</div>
-    <div class="won">you won</div>
-    <button id="startGame">START</button>
-    <div><sup>1</sup>&frasl;<sub>2</sub></div>
-      <canvas id="canvas" width="320" height="320">
-  
-      </canvas>
-      <input type="button" class="btn btn-hide" id="up" value="up">
-      <input type="button" class="btn"  id="down" value="down" >
-      <input type="button" class="btn btn-hide" id="left" value="left" >
-      <input type="button" class="btn"  id="right" value="right">
-      <img src="https://i.ibb.co/HHBFJdH/char.png" alt="" id="source" />
-      <p id="eggs-container"></p>
+    <div class="won">you won</div> -->
+    <div class="main-container">
+        <header>
+            <div class="svg-wrapper"><img src="cad.svg" alt="cadburys logo"></div>
+        </header>
+        <div class="scores-container">
+            <div><sup id="eggs-container">1</sup>&frasl;<sub>15</sub></div>
+            <div>Seconds Left: <span id="countdown">10</span></div>
+        </div>
 
-  <h3>Seconds Left: <span id="time-left">10</span></h3>
-  <h5></h5>
-  <button id="start-button">start</button>
+        <div class="middle-canvas-container">
+            <div class="canvas-wrapper">
+                <div class="stats-container" id="stats">
+                    <div id="startGame">START</div>
+                </div>
+                <div class="canvas-container">
+                    <canvas id="canvas" width="320" height="320">
+                </div>   
+        
+            </div>
+        </div>
+      
+      
+          
+      
+          </canvas>
+          <input type="button" class="btn btn-hide" id="up" value="up">
+          <input type="button" class="btn"  id="down" value="down" >
+          <input type="button" class="btn btn-hide" id="left" value="left" >
+          <input type="button" class="btn"  id="right" value="right">
+          <img src="https://i.ibb.co/HHBFJdH/char.png" alt="" class="source" id="source" />
+    </div>
+    
     <script src="app.js"></script>
 </body>
 </html>

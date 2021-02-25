@@ -23,9 +23,9 @@ img {
     max-width: 100%;
     height: auto;
 }
-  
+
   body {
-    background-color: #333;
+    background-color: $white;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -34,35 +34,85 @@ img {
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
     margin: 0;
+   
   }
   
-  #canvas {
-    background: #f0f0f0;
-    border-radius: 5px;
-  }
   
-  #source {
+
+  .main-container {
+    border-radius: 15px;
+  background: $gameboyPurple;
+  max-width: 100%;
+  width: 375px;
+  height: 667px;
+  @include mobile {
+    border-radius: 0px;  
+    width: 100%;
+    
+}
+.scores-container {
+  display: flex;
+  div {
+      flex: 1;
+  }  
+}
+.middle-canvas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+}
+  
+  
+  .source {
     display: none; 
   }
   .btn:focus {
     outline: none;
     box-shadow: none;
   }
-  .make-box {
-    background: green;
-    width: 320px;
-    height: 320px;
-  }
-  .toggle {
-    display: none;
-  }
-  .class1 {
-      color: #f00;
-  }
-  
-  .class2 {
+
+  .hide {
       display: none;
   }
-  .won {
-    display: none;
-  }
+
+  .canvas-wrapper {
+
+    //border-radius: 5px;
+    //border: 10px $cadburys2 solid;
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    .stats-container {
+        background: $purple2;
+        z-index: 200;
+            width: 320px;
+            height: 320px;
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+        }
+        .canvas-container {
+            width: 320px;
+            height: 320px;
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+            #canvas {
+                border-radius: 0 !important;
+              border-radius: 5px;
+              background:$lightGreen ;
+            
+            }
+        }
+}
+.svg-wrapper  {
+    //border: 10px $cadburys2 solid;
+    img {
+    width: 150px;
+        //transform: rotate(-15deg);
+    
+    }
+}

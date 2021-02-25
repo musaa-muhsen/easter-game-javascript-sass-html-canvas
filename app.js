@@ -4,9 +4,10 @@
 var timeLeft = 10; 
 var eggsCaught = 0;
 var eggsNumber = document.getElementById('eggs-container');
+var stats = document.getElementById('stats');
 eggsNumber.innerHTML = eggsCaught;
 
-let timeUp = false;
+//let timeUp = false;
 
 const won = document.querySelector('.won');
 
@@ -14,6 +15,7 @@ const scoreBoard = document.querySelector('.score');
 const startBtn2 = document.getElementById('startGame')
 startBtn2.addEventListener('click', startGame); // make sure there a few buttons for this 
 startBtn2.addEventListener('touchstart' , startGame )
+const countdownNum = document.querySelector('#countdown');
 
 function startGame (e) {
     e.preventDefault;
@@ -23,64 +25,31 @@ function startGame (e) {
     if(e.type == 'click') {
         gogo();
     }
-//console.log(this);
-    //timeUp = true;
-  // startBtn2.classList.toggle('hide');
-   //timeLeft = 10; 
-   
-//    setTimeout(() => {
-       
-//        timeUp = true
-//        console.log(timeUp)
-// }, 10000)
+    //startBtn2.classList.toggle('hide');
+
    countdownTimer();
-   //this.style.display = "none";
+this.style.display = "none";
+stats.style.display = "none";
 }
 
-function classToggle() {
-    this.classList.toggle('class1');
-    this.classList.toggle('class2');
-}
-document.querySelector('#div').addEventListener('click', classToggle);
 
-
-// function countDown() {
-//     timeLeft = 10
-//     setInterval(function() {
-//       if (timeLeft <= 0 ) {
-//         clearInterval(timeLeft = 0);
-//       }
-//       //timeLeftDisplay.innerHTML = timeLeft
-//       console.log(timeLeft)
-//       timeLeft -=1;
-//     }, 1000)
-//   }
 function countdownTimer() {
     var timer = setInterval(function() {
         timeLeft--;
-        //countdownNum.textContent = timeleft; add here 
-        console.log(timeLeft)
+        countdownNum.innerHTML = timeLeft; 
         if (timeLeft <= 0) 
           clearInterval(timer);
         }, 1000);
   
         setTimeout(() => {
-//countdownNum.textContent = '10'; // just add it to the dom later this is when it begins  
-         // alert(eggsCaught) // after 10 seconds collect these points 
-          // add the start button 
-          // could add it here the you've won etc 
-          
-
-        }, 10000) // orginially 11500 
+            countdownNum.innerHTML = '10'; // just add it to the dom later this is when it begins  
+        }, 16000) // orginially 11500 
   }
 
 
-//   function myFunction() {
-//     var element = document.getElementById("myDIV");
-//     element.classList.toggle("mystyle");
-//  }
+
 function gogo() {
-  const canvas = document.getElementById('canvas');
+const canvas = document.getElementById('canvas');
 const down = document.getElementById('goDown');
 const ctx = canvas.getContext('2d');
 
@@ -297,6 +266,13 @@ setInterval(() => {
 setTimeout(() => {
     if (eggsCaught >= 2 ) {
         console.log('won!')
+        stats.innerHTML = `
+        <form>
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email">
+        <input type="submit">
+      </form>
+        `;
        setTimeout(() => {
        
         // add block here 
@@ -305,9 +281,11 @@ setTimeout(() => {
         //startGame();
         //gogo();
         location.reload();
-    }, 5000)
+        // make time longer when completed 
+    }, 5000) 
     } else {
-        console.log('You lost!')
+        stats.innerHTML = `You Lost`;
+        console.log('You lost!');
         setTimeout(() => {
             // add block here 
            // startBtn2.style.display = "block";
