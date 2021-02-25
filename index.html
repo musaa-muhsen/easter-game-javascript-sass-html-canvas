@@ -13,7 +13,7 @@
     <div class="won">you won</div> -->
     <div class="main-container">
         <header>
-            <div class="svg-wrapper"><img src="cad.svg" alt="cadburys logo"></div>
+            <div class="svg-wrapper"><img src="images/cad.svg" alt="cadburys logo"></div>
         </header>
         <div class="scores-container">
             <div><sup id="eggs-container">1</sup>&frasl;<sub>15</sub></div>
@@ -22,8 +22,9 @@
 
         <div class="middle-canvas-container">
             <div class="canvas-wrapper">
-                <div class="stats-container" id="stats">
-                    <div id="startGame">START</div>
+                <div class="start-container" >
+                     <!-- <div id="startGame">START</div>  -->
+                     <div id="startGame" class="other other-2">Play Game</div> 
                 </div>
                 <div class="canvas-container">
                     <canvas id="canvas" width="320" height="320">
@@ -31,18 +32,31 @@
         
             </div>
         </div>
+
+       
       
       
           
       
           </canvas>
-          <input type="button" class="btn btn-hide" id="up" value="up">
-          <input type="button" class="btn"  id="down" value="down" >
-          <input type="button" class="btn btn-hide" id="left" value="left" >
-          <input type="button" class="btn"  id="right" value="right">
+<footer>
+          <div class="buttons-container">
+
+            <input type="button" class="btn btn-hide" id="up" value="up">
+            <input type="button" class="btn"  id="down" value="down" >
+            <input type="button" class="btn btn-hide" id="left" value="left" >
+            <input type="button" class="btn"  id="right" value="right">
+            <img src="images/keypad.svg" alt="keypad">
+          </div>
+        </footer>
           <img src="https://i.ibb.co/HHBFJdH/char.png" alt="" class="source" id="source" />
     </div>
-    
+
+    <!-- <div class="lvl1">8-Bit borders using CSS3 shadows</div><hr/>
+    <div class="lvl2">4px border, 2 stpes</div><hr/>
+    <div class="lvl3">3px border, 3 steps</div><hr/>
+    <div class="lvl4">5px border, 4 steps</div><hr/> 
+    <div class="other other-2">6px border, 1 step</div><hr/>-->
     <script src="app.js"></script>
 </body>
 </html>

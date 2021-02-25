@@ -1,3 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+.other-2 {
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  padding: .4em 1.3em;
+}
+
+hr {
+  height: 10px;
+  visibility: hidden;
+}
+
+/*@mixin step2( $width, $color, $bgcolor ) {
+  box-shadow:
+    $width 0 $bgcolor,
+    -$width 0 $bgcolor,
+    0 (-$width) $bgcolor,
+    0 $width $bgcolor,
+    2*$width 0 $color,
+    -2*$width 0 $color,
+    0 (-2*$width) $color,
+    0 2*$width $color,
+    $width $width $color,
+    -$width $width $color,
+    $width (-$width) $color,
+    -$width (-$width) $color;
+}*/
+/*@mixin step3( $width, $color, $bgcolor ) {
+  box-shadow:
+    $width 0 $bgcolor,
+    -$width 0 $bgcolor,
+    0 (-$width) $bgcolor,
+    0 $width $bgcolor,
+    2*$width 0 $bgcolor,
+    -2*$width 0 $bgcolor,
+    0 (-2*$width) $bgcolor,
+    0 2*$width $bgcolor, 
+    0 0 0 $width $bgcolor,
+    3*$width 0 $color,
+    -3*$width 0 $color, 
+    0 3*$width $color,
+    0 (-3*$width) $color, 
+    -2*$width (-$width) $color,
+    -$width (-2*$width) $color,
+    $width (-2*$width) $color,
+    2*$width (-$width) $color,
+    2*$width $width $color,
+    $width 2*$width $color, 
+    -$width 2*$width $color,
+    -2*$width $width $color;
+}*/
+.lvl1 {
+  -webkit-box-shadow: 16px 0 white, -16px 0 white, 0 -16px white, 0 16px white, 4px 0 0 8px white, -4px 0 0 8px white, 0 -4px 0 8px white, 0 4px 0 8px white, 20px 0 orange, -20px 0 orange, 0 -20px orange, 0 20px orange, 0 0 0 12px orange, 0 8px 0 8px orange, 0 -8px 0 8px orange, 8px 0 0 8px orange, -8px 0 0 8px orange;
+          box-shadow: 16px 0 white, -16px 0 white, 0 -16px white, 0 16px white, 4px 0 0 8px white, -4px 0 0 8px white, 0 -4px 0 8px white, 0 4px 0 8px white, 20px 0 orange, -20px 0 orange, 0 -20px orange, 0 20px orange, 0 0 0 12px orange, 0 8px 0 8px orange, 0 -8px 0 8px orange, 8px 0 0 8px orange, -8px 0 0 8px orange;
+  margin: 20px auto;
+}
+
+.lvl2 {
+  -webkit-box-shadow: 4px 0 white, -4px 0 white, 0 -4px white, 0 4px white, 8px 0 blue, -8px 0 blue, 0 -8px blue, 0 8px blue, 0 0 0 4px blue;
+          box-shadow: 4px 0 white, -4px 0 white, 0 -4px white, 0 4px white, 8px 0 blue, -8px 0 blue, 0 -8px blue, 0 8px blue, 0 0 0 4px blue;
+  margin: 8px auto;
+}
+
+.lvl3 {
+  -webkit-box-shadow: 3px 0 white, -3px 0 white, 0 -3px white, 0 3px white, 6px 0 white, -6px 0 white, 0 -6px white, 0 6px white, 0 0 0 3px white, 9px 0 red, -9px 0 red, 0 9px red, 0 -9px red, 0 -3px 0 3px red, 0 3px 0 3px red, 3px 0 0 3px red, -3px 0 0 3px red;
+          box-shadow: 3px 0 white, -3px 0 white, 0 -3px white, 0 3px white, 6px 0 white, -6px 0 white, 0 -6px white, 0 6px white, 0 0 0 3px white, 9px 0 red, -9px 0 red, 0 9px red, 0 -9px red, 0 -3px 0 3px red, 0 3px 0 3px red, 3px 0 0 3px red, -3px 0 0 3px red;
+  margin: 9px auto;
+}
+
+.lvl4 {
+  -webkit-box-shadow: 5px 0 white, -5px 0 white, 0 -5px white, 0 5px white, 10px 0 white, -10px 0 white, 0 -10px white, 0 10px white, 0 0 0 5px white, 15px 0 white, -15px 0 white, 0 15px white, 0 -15px white, 0 -5px 0 5px white, 0 5px 0 5px white, 5px 0 0 5px white, -5px 0 0 5px white, 20px 0 green, -20px 0 green, 0 -20px green, 0 20px green, 10px 0 0 5px green, -10px 0 0 5px green, 0 10px 0 5px green, 0 -10px 0 5px green, 0 0 0 10px green;
+          box-shadow: 5px 0 white, -5px 0 white, 0 -5px white, 0 5px white, 10px 0 white, -10px 0 white, 0 -10px white, 0 10px white, 0 0 0 5px white, 15px 0 white, -15px 0 white, 0 15px white, 0 -15px white, 0 -5px 0 5px white, 0 5px 0 5px white, 5px 0 0 5px white, -5px 0 0 5px white, 20px 0 green, -20px 0 green, 0 -20px green, 0 20px green, 10px 0 0 5px green, -10px 0 0 5px green, 0 10px 0 5px green, 0 -10px 0 5px green, 0 0 0 10px green;
+  margin: 20px auto;
+}
+
+.other {
+  -webkit-box-shadow: 6px 0 #212121, -6px 0 #212121, 0 -6px #212121, 0 6px #212121;
+          box-shadow: 6px 0 #212121, -6px 0 #212121, 0 -6px #212121, 0 6px #212121;
+  margin: 6px auto;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .buttons-container {
+  display: -ms-grid;
+  display: grid;
+  height: 100px;
+  width: 100px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  -webkit-transform: translateX(px);
+          transform: translateX(px);
+}
+
+footer .buttons-container img {
+  z-index: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / span 3;
+}
+
+footer .buttons-container #up {
+  z-index: 14;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+  height: 35px;
+  width: 40px;
+  position: relative;
+  right: 7px;
+}
+
+footer .buttons-container #down {
+  z-index: 12;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / span 1;
+  height: 35px;
+  width: 40px;
+  position: relative;
+  -webkit-transform: translateX(3px);
+          transform: translateX(3px);
+}
+
+footer .buttons-container #down {
+  z-index: 10;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / span 1;
+  height: 35px;
+  width: 40px;
+  position: relative;
+  right: 7px;
+}
+
+footer .buttons-container #left {
+  z-index: 11;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / span 1;
+  height: 35px;
+  width: 40px;
+  position: relative;
+  right: 7px;
+}
+
+footer .buttons-container #right {
+  z-index: 10;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/ span 1;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / span 1;
+  height: 35px;
+  width: 40px;
+  position: relative;
+  right: -20px;
+}
+
 *, *:before, *:after {
   padding: 0;
   margin: 0;
@@ -6,7 +200,21 @@
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Press Start 2P", cursive;
+  min-height: 100vh;
 }
 
 li {
@@ -23,30 +231,18 @@ img {
   height: auto;
 }
 
-body {
-  background-color: #FFFAEF;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
-  min-height: 100vh;
-  margin: 0;
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .main-container {
   border-radius: 15px;
-  background: #551A8B;
+  background: #ACA5FF;
   max-width: 100%;
   width: 375px;
   height: 667px;
@@ -63,6 +259,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 20px 0 10px 0;
 }
 
 .main-container .scores-container div {
@@ -104,7 +301,6 @@ body {
 .canvas-wrapper {
   width: 320px;
   height: 320px;
-  overflow: hidden;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -113,7 +309,8 @@ body {
       grid-template-rows: 1fr;
 }
 
-.canvas-wrapper .stats-container {
+.canvas-wrapper .start-container {
+  opacity: 0;
   background: #ACA5FF;
   z-index: 200;
   width: 320px;

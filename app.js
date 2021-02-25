@@ -4,14 +4,14 @@
 var timeLeft = 10; 
 var eggsCaught = 0;
 var eggsNumber = document.getElementById('eggs-container');
-var stats = document.getElementById('stats');
+//var stats = document.getElementById('stats');
 eggsNumber.innerHTML = eggsCaught;
 
 //let timeUp = false;
 
 const won = document.querySelector('.won');
 
-const scoreBoard = document.querySelector('.score');
+const start = document.querySelector('.start-container');
 const startBtn2 = document.getElementById('startGame')
 startBtn2.addEventListener('click', startGame); // make sure there a few buttons for this 
 startBtn2.addEventListener('touchstart' , startGame )
@@ -29,7 +29,7 @@ function startGame (e) {
 
    countdownTimer();
 this.style.display = "none";
-stats.style.display = "none";
+start.style.display = "none";
 }
 
 
@@ -219,20 +219,20 @@ function keyUp(e) {
 
 
 //score 
-function score() {
-    ctx.fillStyle = "black";
-	ctx.font = "16px Helvetica";
-	ctx.textAlign = "left";
-	ctx.textBaseline = "top";
-	ctx.fillText("Eggs caught: " + eggsCaught, 20, 32); // position of the writing // need to add points from the update function 
+// function score() {
+//     ctx.fillStyle = "black";
+// 	ctx.font = "16px Helvetica";
+// 	ctx.textAlign = "left";
+// 	ctx.textBaseline = "top";
+// 	ctx.fillText("Eggs caught: " + eggsCaught, 20, 32); // position of the writing // need to add points from the update function 
 
-}
+// }
 
 
 // anything that will be displayed on the screen 
 function render() {
     clear(); // this will clear the canvas 
-    score();
+    //score();
     // timer as well
     drawPlayer();
     drawBox();
@@ -266,7 +266,7 @@ setInterval(() => {
 setTimeout(() => {
     if (eggsCaught >= 2 ) {
         console.log('won!')
-        stats.innerHTML = `
+        start.innerHTML = `
         <form>
         <label for="email">Enter your email:</label>
         <input type="email" id="email" name="email">
@@ -284,7 +284,8 @@ setTimeout(() => {
         // make time longer when completed 
     }, 5000) 
     } else {
-        stats.innerHTML = `You Lost`;
+        start.style.display = "block";
+        start.innerHTML = `You Lost`;
         console.log('You lost!');
         setTimeout(() => {
             // add block here 
@@ -295,9 +296,6 @@ setTimeout(() => {
             location.reload();
         }, 5000)
     }
- 
-   
-
 }, 11500)
 
 }
