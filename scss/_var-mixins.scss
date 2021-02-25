@@ -1,0 +1,35 @@
+$font1: "Helvetica Neue", Helvetica, sans-serif;
+
+$bold1: 700;
+$bold2: 600;
+
+$white: #fff;
+$greyLight: #EBEBEB;
+$greyMed: #707070;
+$greyDark: #212121;
+$black: #000;
+$lightGreen: #03C872;
+$lightGreen2: lightgreen;
+$green3: #14BE73;
+$purple1: #8577EF;
+$purple2: #ACA5FF;
+$blueColor: #50A9F4;
+$pink: #FFB9E9;
+$white: #FFFAEF;
+$lightblue: #9FCFF3;
+
+
+
+$p9: 0.9;
+$p8: 0.8;
+$p7: 0.7;
+$p6: 0.6;
+$p5: 0.5;
+$p4: 0.4;
+$p3: 0.3;
+
+@mixin mobile {
+	@media all and (max-width: 1700px)  {
+       @content;
+	}
+}
