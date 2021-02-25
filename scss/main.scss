@@ -32,6 +32,9 @@ img {
     max-width: 100%;
     height: auto;
 }
+#bunny , #eggy {
+  display: none;
+}
 
 input,
 textarea,
@@ -41,6 +44,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.btn:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 
@@ -59,10 +66,16 @@ a {
 }
 .scores-container {
   display: flex;
-  margin: 20px 0 10px 0;
+  justify-content: flex-end;
+  //background: red;
+  font-size: 15px;
+  margin: 50px 0 15px 0;
   div {
       flex: 1;
-  }  
+      // padding-right
+  
+       
+}
 }
 .middle-canvas-container {
     display: flex;
@@ -70,20 +83,9 @@ a {
     align-items: center;
     justify-content: center;
 }
-}
-  
-  
-  .source {
-    display: none; 
-  }
-  .btn:focus {
-    outline: none;
-    box-shadow: none;
-  }
 
-  .hide {
-      display: none;
-  }
+  
+
 
   .canvas-wrapper {
 
@@ -96,13 +98,41 @@ a {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     .start-container {
-opacity: 0;
-        background: $purple2;
-        z-index: 200;
+        opacity:1;
+        border: $greyDark 4px solid;
+        background: $blueColor;
+        z-index: 300;
             width: 320px;
             height: 320px;
             grid-column: 1 / span 1;
             grid-row: 1 / span 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            #startGame {
+              cursor: pointer;
+              margin: auto;
+              background: $green3;
+
+            }
+
+            .won-container {
+              margin: auto;
+             
+            }
+        }
+        .lose-container {
+          width: 320px;
+          height: 320px;
+          grid-column: 1 / span 1;
+          grid-row: 1 / span 1;
+          z-index: 20;
+          display: flex;
+          h3 {
+            margin: auto;
+          font-size: 1.3rem;
+          }
+          
         }
         .canvas-container {
             width: 320px;
@@ -112,16 +142,23 @@ opacity: 0;
             #canvas {
                 border-radius: 0 !important;
               border-radius: 5px;
-              background:$lightGreen ;
+              background:$green3;
             
             }
         }
 }
 .svg-wrapper  {
+  display: flex;
     //border: 10px $cadburys2 solid;
     img {
+      margin: 20px auto 0 auto;
     width: 150px;
         //transform: rotate(-15deg);
     
     }
 }
+
+.other-2 {
+  background: $lightGreen2 !important;
+}
+  }

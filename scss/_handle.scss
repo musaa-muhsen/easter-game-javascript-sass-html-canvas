@@ -3,6 +3,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 40px;
 
 
 .buttons-container {
@@ -11,7 +12,15 @@ footer {
     width: 100px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    transform: translateX(px);
+    .empty-box {
+        z-index: 2;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 3;
+        
+    }
     img {
         z-index: 1;
         grid-column: 1 / span 3;
@@ -19,56 +28,55 @@ footer {
     }
 
     #up {
-
+        opacity: 0;
         z-index: 14;
        // display: none;
        grid-column: 2 / span 1;
        grid-row: 1 / span 1;
-       height: 35px;
-       width: 40px;
-       position: relative;
-       right: 7px;
+       height: 33px;
+       width: 33px;
+    //    position: relative;
+    //    right: 7px;
+      // transform: translateX(-10px);
     }
     #down {
+        opacity: 0;
         z-index: 12;
        // display: none;
        grid-column: 2 / span 1;
        grid-row: 5 / span 1;
-       height: 35px;
-       width: 40px;
-       position: relative;
-       transform: translateX(3px);
-    }
-    #down {
-        z-index: 10;
-       // display: none;
-       grid-column: 2 / span 1;
-       grid-row: 5 / span 1;
-       height: 35px;
-       width: 40px;
-       position: relative;
-       right: 7px;
-    }
-    #left {
-        z-index: 11;
-       // display: none;
-       grid-column: 1 / span 1;
-       grid-row: 3 / span 1;
-       height: 35px;
-       width: 40px;
-       position: relative;
-       right: 7px;
+       height: 33px;
+       width: 33px;
+       //position: relative;
+       //transform: translateX(-10px);
+       //transform: translateY(-1px);
+
     }
     #right {
+        opacity: 0;
         z-index: 10;
        // display: none;
        grid-column: 3/ span 1;
        grid-row: 3 / span 1;
-       height: 35px;
-       width: 40px;
-       position: relative;
-       right: -20px;
+       height: 33px;
+       width: 33px;
+       //position: relative;
+       //right: 7px;
+       
+       //transform: translateX(-12px);
     }
+    #left {
+        opacity: 0;
+        z-index: 11;
+       // display: none;
+       grid-column: 1 / span 1;
+       grid-row: 3 / span 1;
+       height: 33px;
+       width: 33px;
+    //    position: relative;
+    //    right: 7px;
+    }
+  
 
 }
 }

@@ -5,6 +5,10 @@
   display: inline-block;
   text-align: center;
   padding: .4em 1.3em;
+  cursor: pointer;
+}
+.btn-g {
+  background: red;
 }
 hr {
   height: 10px;
@@ -155,5 +159,8 @@ hr {
   @include step4( 5px, green, white );
 }
 .other {
+  @include step1( 6px, $greyDark );
+}
+.other3 {
   @include step1( 6px, $greyDark );
 }

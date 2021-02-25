@@ -16,29 +16,35 @@
             <div class="svg-wrapper"><img src="images/cad.svg" alt="cadburys logo"></div>
         </header>
         <div class="scores-container">
-            <div><sup id="eggs-container">1</sup>&frasl;<sub>15</sub></div>
-            <div>Seconds Left: <span id="countdown">10</span></div>
+            <div class="score"><sup id="eggs-container">1</sup><span>&frasl;</span><sub>15</sub></div>
+            <div>Seconds:<span id="countdown">10</span></div>
         </div>
 
         <div class="middle-canvas-container">
             <div class="canvas-wrapper">
-                <div class="start-container" >
-                     <!-- <div id="startGame">START</div>  -->
-                     <div id="startGame" class="other other-2">Play Game</div> 
-                </div>
+                <div class="lose-container" >
+                    <!-- <div id="startGame">START</div>  -->
+                    <h3>You Lose!</h3>
+               </div>
+               <div id="startGame" class="start-container">
+                <p class="other3 other-2">Play Game</p>
+               </div>
+
+                
                 <div class="canvas-container">
                     <canvas id="canvas" width="320" height="320">
+                    </canvas>
                 </div>   
         
             </div>
         </div>
-
+        
        
       
       
           
       
-          </canvas>
+          
 <footer>
           <div class="buttons-container">
 
@@ -46,10 +52,13 @@
             <input type="button" class="btn"  id="down" value="down" >
             <input type="button" class="btn btn-hide" id="left" value="left" >
             <input type="button" class="btn"  id="right" value="right">
+            <div class="empty-box"></div>
             <img src="images/keypad.svg" alt="keypad">
           </div>
         </footer>
-          <img src="https://i.ibb.co/HHBFJdH/char.png" alt="" class="source" id="source" />
+          <img src="images/bunny1.png" alt="" class="source" id="bunny" />
+          <img src="images/egg2.png" alt="" class="source" id="eggy" />
+
     </div>
 
     <!-- <div class="lvl1">8-Bit borders using CSS3 shadows</div><hr/>

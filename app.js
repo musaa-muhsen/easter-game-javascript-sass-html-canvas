@@ -14,21 +14,22 @@ const won = document.querySelector('.won');
 const start = document.querySelector('.start-container');
 const startBtn2 = document.getElementById('startGame')
 startBtn2.addEventListener('click', startGame); // make sure there a few buttons for this 
-startBtn2.addEventListener('touchstart' , startGame )
+startBtn2.addEventListener('touchend' , startGame )
 const countdownNum = document.querySelector('#countdown');
 
+
 function startGame (e) {
-    e.preventDefault;
+    
     if(e.type == 'touchend') {
+        //alert(e.type);
         gogo();
-    }
-    if(e.type == 'click') {
+    } else if (e.type == 'click') {
         gogo();
     }
     //startBtn2.classList.toggle('hide');
 
    countdownTimer();
-this.style.display = "none";
+   e.preventDefault;
 start.style.display = "none";
 }
 
@@ -43,7 +44,7 @@ function countdownTimer() {
   
         setTimeout(() => {
             countdownNum.innerHTML = '10'; // just add it to the dom later this is when it begins  
-        }, 16000) // orginially 11500 
+        }, 11000) // orginially 11500 
   }
 
 
@@ -53,8 +54,8 @@ const canvas = document.getElementById('canvas');
 const down = document.getElementById('goDown');
 const ctx = canvas.getContext('2d');
 
-const image = document.getElementById('source');
-
+const bunny = document.getElementById('bunny');
+const eggy = document.getElementById('eggy');
 //const intro = 
 // handle buttons 
 const rightBtn = document.getElementById('right');
@@ -86,8 +87,8 @@ downBtn.addEventListener('touchend', keyUp);
 
 // rendered stuff 
 const player = {
-    w: 30,
-    h: 50,
+    w: 40,
+    h: 49,
     x: 20,
     y: 200,
     speed: 5,
@@ -95,8 +96,8 @@ const player = {
     dy: 0
 }
 const egg = {
-    w: 20,
-    h: 30,
+    w: 30,
+    h: 34,
     x: 40,
     y: 60
 }
@@ -105,14 +106,19 @@ let eggsCaught = 0;
 
 function drawPlayer() {
     // using the object with the drawImage function 
-    ctx.drawImage(image, player.x, player.y, player.w, player.h); // syntax: the image, place x , place y, width and height
-}
 
-function drawBox() {
-    ctx.beginPath();
-    ctx.rect(egg.x, egg.y, egg.w, egg.h); //context.rect(x,y,width,height);
-    ctx.stroke();
+    ctx.drawImage(bunny, player.x, player.y, player.w, player.h); // syntax: the image, place x , place y, width and height
 }
+function drawEgg() {
+    // using the object with the drawImage function 
+
+    ctx.drawImage(eggy, egg.x, egg.y, egg.w, egg.h); // syntax: the image, place x , place y, width and height
+}
+// function drawBox() {
+//     ctx.beginPath();
+//     ctx.rect(egg.x, egg.y, egg.w, egg.h); //context.rect(x,y,width,height);
+//     ctx.stroke();
+// }
 
 // to clear
 function clear() {
@@ -235,7 +241,8 @@ function render() {
     //score();
     // timer as well
     drawPlayer();
-    drawBox();
+    //drawBox();
+    drawEgg()
     newPos(); // update the position when called by events 
 
 }
@@ -265,14 +272,17 @@ setInterval(() => {
 
 setTimeout(() => {
     if (eggsCaught >= 2 ) {
+        //start.style.display = "block";
         console.log('won!')
-        start.innerHTML = `
-        <form>
-        <label for="email">Enter your email:</label>
-        <input type="email" id="email" name="email">
-        <input type="submit">
-      </form>
-        `;
+        // start.innerHTML = `
+        
+        // <div class="won-container">
+        // <h4>You've Won!</h4>
+        //    <input type="email" id="email">
+        //    <button class="other">submit</button>
+        // </div>
+    
+        // `;
        setTimeout(() => {
        
         // add block here 
@@ -284,8 +294,8 @@ setTimeout(() => {
         // make time longer when completed 
     }, 5000) 
     } else {
-        start.style.display = "block";
-        start.innerHTML = `You Lost`;
+        //start.style.display = "block";
+        //start.innerHTML = `You Lost`;
         console.log('You lost!');
         setTimeout(() => {
             // add block here 
