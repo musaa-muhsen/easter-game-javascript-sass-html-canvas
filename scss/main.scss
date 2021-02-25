@@ -4,7 +4,7 @@
 @import "_handle";
 
 *, *:before, *:after{
-    //outline: 1px solid red;
+   // outline: 1px solid red;
      padding: 0;
      margin: 0;
      box-sizing: border-box;
@@ -50,7 +50,25 @@ a {
   box-shadow: none;
 }
 
-
+header {
+  .svg-wrapper  {
+    display: flex;
+      //border: 10px $cadburys2 solid;
+      img {
+        margin: 20px auto 0 auto;
+      width: 150px;
+          //transform: rotate(-15deg);
+      
+      }
+  }
+  p {
+    font-size: 15px;
+    text-align: center;
+    span {
+      font-size: 20px;
+    }
+  }
+}
   
 
   .main-container {
@@ -62,19 +80,26 @@ a {
   @include mobile {
     border-radius: 0px;  
     width: 100%;
-    
 }
+
 .scores-container {
   display: flex;
   justify-content: flex-end;
   //background: red;
-  font-size: 15px;
+  //background: yellow;
+  font-size: 16px;
   margin: 50px 0 15px 0;
   div {
       flex: 1;
-      // padding-right
-  
-       
+      // padding-right   
+}
+.score-wrapper {
+  position: relative;
+  top: 30px;
+  left: 40px;
+  z-index: 2000;
+  background: wheat;
+
 }
 }
 .middle-canvas-container {
@@ -115,31 +140,61 @@ a {
               background: $green3;
 
             }
-
-            .won-container {
-              margin: auto;
-             
-            }
         }
-        .lose-container {
+        .win-container {
+          border: $greyDark 4px solid;
           width: 320px;
           height: 320px;
           grid-column: 1 / span 1;
           grid-row: 1 / span 1;
           z-index: 20;
           display: flex;
+          background: $pink;
           h3 {
             margin: auto;
           font-size: 1.3rem;
           }
           
+
+         
+        }
+        .lose-container {
+          display: none;
+          //border: $greyDark 4px solid;
+          width: 320px;
+          height: 320px;
+          grid-column: 1 / span 1;
+          grid-row: 1 / span 1;
+          z-index: 20;
+          display: flex;
+          // justify-content: center;
+          // align-items: center;
+          background: $pink;
+          .middle-lose {
+            //outline: red solid 1px;
+            width: auto;
+            margin-top: 150px;
+            text-align: center;
+      //     font-size: 1.3rem;
+      //     position: absolute;
+      //  left: 50%;
+      // -webkit-transform: translateX(-50%);
+      //  transform: translateX(-50%)
+          }
+          
         }
         .canvas-container {
+          
             width: 320px;
             height: 320px;
             grid-column: 1 / span 1;
             grid-row: 1 / span 1;
             #canvas {
+              width: 320px !important;
+              height: 320px  !important;
+              grid-column: 1 / span 1;
+              grid-row: 1 / span 1;
+          border: $greyDark 4px solid;
                 border-radius: 0 !important;
               border-radius: 5px;
               background:$green3;
@@ -147,18 +202,10 @@ a {
             }
         }
 }
-.svg-wrapper  {
-  display: flex;
-    //border: 10px $cadburys2 solid;
-    img {
-      margin: 20px auto 0 auto;
-    width: 150px;
-        //transform: rotate(-15deg);
-    
-    }
-}
+
+
 
 .other-2 {
   background: $lightGreen2 !important;
 }
-  }
+  } // end of main container 

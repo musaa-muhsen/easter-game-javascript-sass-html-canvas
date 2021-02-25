@@ -7,10 +7,13 @@ var eggsNumber = document.getElementById('eggs-container');
 //var stats = document.getElementById('stats');
 eggsNumber.innerHTML = eggsCaught;
 
+
 //let timeUp = false;
 
-const won = document.querySelector('.won');
-
+const wonContainer = document.querySelector('.win-container');
+const loseContainer = document.querySelector('.lose-container');
+console.log(loseContainer, wonContainer)
+const eggsNumber2 = document.querySelector('.eggs-number');
 const start = document.querySelector('.start-container');
 const startBtn2 = document.getElementById('startGame')
 startBtn2.addEventListener('click', startGame); // make sure there a few buttons for this 
@@ -31,6 +34,8 @@ function startGame (e) {
    countdownTimer();
    e.preventDefault;
 start.style.display = "none";
+loseContainer.style.display = "none";
+wonContainer.style.display = "none";
 }
 
 
@@ -56,8 +61,7 @@ const ctx = canvas.getContext('2d');
 
 const bunny = document.getElementById('bunny');
 const eggy = document.getElementById('eggy');
-//const intro = 
-// handle buttons 
+
 const rightBtn = document.getElementById('right');
 const leftBtn = document.getElementById('left');
 const upBtn = document.getElementById('up');
@@ -272,8 +276,15 @@ setInterval(() => {
 
 setTimeout(() => {
     if (eggsCaught >= 2 ) {
-        //start.style.display = "block";
-        console.log('won!')
+        wonContainer.style.display = "block";
+        // if (eggsCaught == 0) {
+        //     eggsNumber2.innerHTML = 0;
+        // } else {
+        //     eggsNumber2.innerHTML = eggsCaught;
+        // }
+     
+        
+        console.log(wonContainer)
         // start.innerHTML = `
         
         // <div class="won-container">
@@ -296,7 +307,14 @@ setTimeout(() => {
     } else {
         //start.style.display = "block";
         //start.innerHTML = `You Lost`;
-        console.log('You lost!');
+        
+        loseContainer.style.display = "block";
+        // console.log('You lost!');
+        // eggsNumber2.addEventListener('click', function(e) {
+        //     e.preventDefault;
+        //     console.log(e.type);
+        //     startGame(e)
+        // })
         setTimeout(() => {
             // add block here 
            // startBtn2.style.display = "block";
@@ -304,7 +322,7 @@ setTimeout(() => {
             //startGame();
             //gogo();
             location.reload();
-        }, 5000)
+        }, 3000)
     }
 }, 11500)
 
