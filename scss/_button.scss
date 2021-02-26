@@ -7,13 +7,13 @@
   padding: .4em 1.3em;
   cursor: pointer;
 }
-.btn-g {
-  background: red;
-}
-hr {
-  height: 10px;
-  visibility: hidden;
-}
+// .btn-g {
+//   background: red;
+// }
+// hr {
+//   height: 10px;
+//   visibility: hidden;
+// }
 @mixin step1( $width, $color ) {
   box-shadow: 
     $width 0 $color, 

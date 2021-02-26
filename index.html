@@ -14,19 +14,30 @@
     <div class="main-container">
         <header>
             <div class="svg-wrapper"><img src="images/cad.svg" alt="cadburys logo"></div>
-            <p>easter bunny game </p>
+            
             <!-- <span>🐣</span> -->
+            <span></span>
         </header>
         <div class="scores-container">
-            <div class="score-wrapper"><sup id="eggs-container">1</sup><span>&frasl;</span><sub>15</sub></div>
+            <div class="more-container">
+            <div class="score-wrapper">
+               <div><img src="images/egg-container.svg" alt="big egg"></div> 
+               <div><article><sup id="eggs-container">1</sup><span class="middle-line">&frasl;</span><sub class="total-number">15</sub></article></div>
+            </div>
             <div class="timer-wrapper">Seconds:<span id="countdown">10</span></div>
+        </div>
         </div>
 
         <div class="middle-canvas-container">
             <div class="canvas-wrapper">
 
-                <div id="startGame" class="start-container">
-                    <p class="other3 other-2">Play Game</p>
+                <div  class="start-container">
+                    <div class="middle-start">
+    
+                        <p class="game-details"><span>easter bunny egg hunt</span> collect 14 eggs in 20 seconds to win a prize</p>
+                        <p id="startGame" class="other3 other-2">Play Game</p>
+                    </div>
+                
                    </div>
 
                 <div class="lose-container" >
@@ -38,7 +49,11 @@
                </div>
 
                <div class="win-container">
-                  <h3>You Won!</h3>
+                 
+                  <div class="middle-win">
+                    <h3>You Won!</h3>
+    
+                </div>
                </div>
 
 
