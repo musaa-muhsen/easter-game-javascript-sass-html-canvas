@@ -7,6 +7,7 @@ Screenshots of a game for a test task based around cadburys, I choose to make a 
 
 
 ### screenshot of the game 2
+<img width="150" alt="Screenshot 2021-03-03 at 18 11 18 copy" src="https://user-images.githubusercontent.com/57684147/109855797-a2790480-7c50-11eb-9431-f3ee8e4f4360.png">
 
 
 
